@@ -1,20 +1,3 @@
-// 2>nul||goto :start
-/*
-:start
-@echo off
-@chcp 65001
-cls
-set "csc="
-for /r "%SystemRoot%\Microsoft.NET\Framework\" %%# in ("*csc.exe") do set "csc=%%#"
-
-if not exist "%csc%" echo Can't find NET.Framework&&exit
-
-del "%UserProfile%\%~n0.exe%">nul
-call %csc% /nologo /warn:0 /out:"%UserProfile%\%~n0.exe" "%~dpsfnx0"
-call "%UserProfile%\%~n0.exe%"
-exit
-*/
-
 using System;
 using System.Collections.Generic;
 using System.Drawing;
